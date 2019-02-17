@@ -19,9 +19,7 @@ properties([
                     classpath: [], 
                     sandbox: false, 
                     script: 
-                        """  def returnList = [\"Dev\",\"QA\",\"Stage\",\"Prod\"]
-                        return returnList
-                        """
+                        'return ["Dev","QA","Stage","Prod"]'
                 ]
             ]
         ], 
