@@ -5,7 +5,7 @@ node("master") {
           
       parameters: [[$class: 'ChoiceParameter', choiceType: 'PT_MULTI_SELECT', description: '', filterLength: 1, filterable: true, name: 'SVN Test Branches', randomName: 'choice-parameter-3049371221579', script: [$class: 'ScriptlerScript', parameters: [], scriptlerScriptId: 'myscriptler.groovy']]])
 
-      def inputs=INPUT_PARAMS['SVN Test Branches']
+      def inputs=INPUT_PARAMS.'SVN Test Branches'
       echo "The selected items are: ${inputs}"
 
 	}	
