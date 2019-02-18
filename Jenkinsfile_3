@@ -1,9 +1,7 @@
 node("master") {
 	stage ('User Input') {
 		def INPUT_PARAMS = input(message: 'Please Provide Parameters', ok: 'Next',
-                      
-
-                        parameters[[$class: 'ChoiceParameter', choiceType: 'PT_MULTI_SELECT', description: 'List of test branches created by automated pipeline', filterLength: 1, filterable: true, name: 'SVN Test Branches', randomName: 'choice-parameter-734454113885', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: 'return [\'Could not get Env\']'], script: [classpath: [], sandbox: false, script: 'return ["Dev","QA","Stage","Prod"]']]]])
+                        parameters: [[$class: 'ChoiceParameter', choiceType: 'PT_MULTI_SELECT', description: 'List of test branches created by automated pipeline', filterLength: 1, filterable: true, name: 'SVN Test Branches', randomName: 'choice-parameter-734454113885', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: 'return [\'Could not get Env\']'], script: [classpath: [], sandbox: false, script: 'return ["Dev","QA","Stage","Prod"]']]]])
 	}	
 
 }
