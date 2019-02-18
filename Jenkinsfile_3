@@ -5,17 +5,9 @@ node("master") {
           
       parameters: [[$class: 'ChoiceParameter', choiceType: 'PT_MULTI_SELECT', description: '', filterLength: 1, filterable: true, name: 'SVN Test Branches', randomName: 'choice-parameter-3049371221579', script: [$class: 'ScriptlerScript', parameters: [], scriptlerScriptId: 'myscriptler.groovy']]])
 
-      def userInput
-try {
-    userInput = input(
-        id: 'Proceed1', message: 'Was this successful?', parameters: [
-        [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']
-        ])
-} catch(err) { // input false
-    def user = err.getCauses()[0].getUser()
-    userInput = false
-    echo "Aborted by: [${user}]"
-}
+      def inputs=INPUT_PARAMS['SVN Test Branches']
+      echo "The selected items are: ${inputs}"
+
 	}	
 
 }
