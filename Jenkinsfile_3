@@ -3,7 +3,7 @@ node("master") {
 	
 		def INPUT_PARAMS = input(message: 'Please Provide Parameters', ok: 'Next',
           
-      parameters[[$class: 'ChoiceParameter', choiceType: 'PT_MULTI_SELECT', description: '', filterLength: 1, filterable: true, name: 'SVN Test Branches', randomName: 'choice-parameter-3049371221579', script: [$class: 'ScriptlerScript', parameters: [], scriptlerScriptId: 'myscriptler.groovy']]])
+      parameters: [[$class: 'ChoiceParameter', choiceType: 'PT_MULTI_SELECT', description: '', filterLength: 1, filterable: true, name: 'SVN Test Branches', randomName: 'choice-parameter-3049371221579', script: [$class: 'ScriptlerScript', parameters: [], scriptlerScriptId: 'myscriptler.groovy']]])
 
       def userInput
 try {
